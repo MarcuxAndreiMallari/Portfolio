@@ -307,13 +307,13 @@ return [
         [
             'name'   => 'Essential Computer Operation and Maintenance Tips',
             'issuer' => 'Department of Information and Communications Technology',
-            'date'   => 'Novermber 2026',
+            'date'   => 'November 2026',
             'image'  => 'ComputerTips.png',
         ],
         [
             'name'   => 'Principles of Web Development and Introduction to HTML',
             'issuer' => 'Department of Information and Communications Technology',
-            'date'   => 'Novermber 2026',
+            'date'   => 'November 2026',
             'image'  => 'PrinciplesOfWebDev.png',
         ],
     ],
