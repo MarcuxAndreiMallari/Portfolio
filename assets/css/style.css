@@ -89,6 +89,8 @@
 /* Reset and base */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); -webkit-text-size-adjust: 100%; }
+    /* Safety net: nothing can make the page wider than the screen (this is what made phones zoom out and shift the header) */
+    html, body { overflow-x: hidden; overflow-x: clip; }
     body {
         min-height: 100vh;
         background: var(--glow), var(--bg);
@@ -391,7 +393,7 @@
     /* SKILLSET */
 
     /*  Skillset  */
-    .skills-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-3); margin-top: var(--space-4); }   /* stacked, full width, on phone and desktop alike */
+    .skills-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-3); margin-top: var(--space-4); }   /* stacked, full width, on phone and desktop alike */
 
     .tier {
         position: relative; overflow: hidden; display: flex; flex-direction: column; gap: var(--space-2);
@@ -437,7 +439,7 @@
     /* PROJECTS*/
     
     /*  Projects  */
-    .projects-grid { display: grid; gap: var(--space-3); margin-top: var(--space-4); grid-template-columns: 1fr; }
+    .projects-grid { display: grid; gap: var(--space-3); margin-top: var(--space-4); grid-template-columns: minmax(0, 1fr); }
     @media (min-width: 800px) { .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }   /* two cards per row, they grow with the page */
 
     .project {
@@ -669,19 +671,19 @@
     /* CONTACT */
 
     /*  Contact  */
-    .contact-grid { display: grid; gap: var(--space-3); margin-top: var(--space-4); align-items: start; }
-    @media (min-width: 900px) { .contact-grid { grid-template-columns: 5fr 7fr; gap: var(--space-4); } }
+    .contact-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-3); margin-top: var(--space-4); align-items: start; }
+    @media (min-width: 900px) { .contact-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-4); } }
 
     /*  left: details + links  */
     .contact-info, .contact-card {
-        padding: var(--space-3); border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border);
+        min-width: 0; padding: var(--space-3); border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border);
         -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
     }
     .contact-card { padding: var(--space-4) var(--space-3); position: relative; }
     @media (min-width: 640px) { .contact-card { padding: var(--space-4); } }
     .contact-info h3 { font: 600 1.35rem var(--font-head); }
     .ci-blurb { margin-top: .4rem; color: var(--text-muted); font-size: .95rem; }
-    .contact-links { list-style: none; display: grid; gap: .6rem; margin-top: var(--space-3); }
+    .contact-links { list-style: none; display: grid; grid-template-columns: minmax(0, 1fr); gap: .6rem; margin-top: var(--space-3); }
     .contact-links a {
         display: flex; align-items: center; gap: .9rem; padding: .7rem .85rem; border-radius: 12px; min-width: 0;
         border: 1px solid transparent; transition: border-color var(--speed) var(--ease), background-color var(--speed) var(--ease), transform var(--speed) var(--ease);
@@ -696,6 +698,7 @@
     .ci-text { display: flex; flex-direction: column; min-width: 0; line-height: 1.3; }
     .ci-text small { color: var(--text-muted); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
     .ci-text span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; }
+    @media (max-width: 639px) { .ci-text span { white-space: normal; overflow-wrap: anywhere; } }   /* on phones long links wrap instead of pushing the page wider */
     .ci-reply { margin-top: var(--space-3); padding-top: var(--space-2); border-top: 1px solid var(--border); color: var(--text-muted); font-size: .9rem; }
 
     /* form: intent chips + details + buttons */
