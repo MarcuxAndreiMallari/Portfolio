@@ -1,0 +1,19 @@
+<?php
+	require dirname(__DIR__) . '/bootstrap.php';
+		use App\Services\Auth;
+  		use App\Services\Database;
+		use App\Services\ReservationService;
+
+	Auth::requireRole('Student');
+		$user = Auth::user();
+		$error = '';
+		$success = '';
+
+	$buildings = Database::fetchAll("SELECT * FROM buildings WHERE status = 'Active' ORDER BY building_code");
+	$selectedBuilding = (int)($_GET['building'] ?? ($buildings[0]['building_id'] ?? 0));
+	$selectedFloor = (int)($_GET['floor'] ?? 0);
+
+	$floors = Database::fetchAll(
+    		"SELECT * FROM floors WHERE building_id = ? ORDER BY floor_number",
+   	[$selectedBuilding]
+);

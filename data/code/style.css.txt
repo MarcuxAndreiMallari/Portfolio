@@ -1,0 +1,22 @@
+:root {
+  --ink: #2a1744;         
+  --ink-2: #4a3866;
+  --muted: #6f647f;
+  --line: #e6e1ee;
+  --paper: #f7f5fa;
+  --card: #ffffff;
+  --yellow: #f6c928;      
+  --yellow-dk: #e0b30f;
+  --red: #d62839;         
+  --red-bg: #fdebed;
+  --green: #1d7a57;      
+  --green-bg: #e4f4ec;
+  --amber-bg: #fff6d6;
+  --radius: 14px;
+  --shadow: 0 1px 2px rgba(42, 23, 68, .06), 0 8px 24px -12px rgba(42, 23, 68, .18);
+  --font-display: 'Bricolage Grotesque', 'Trebuchet MS', system-ui, sans-serif;
+  --font-body: 'Figtree', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
