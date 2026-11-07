@@ -41,9 +41,9 @@ Live site: <https://marcux-andrei-c-mallari.onrender.com/>
 
 **Option A: XAMPP**
 
-1. Put the project folder in `C:\xampp\htdocs\Portfolio`.
+1. Put the project folder in `C:\xampp\htdocs\Portfolio`. Or put the project folder in `C:\xampp\htdocs\**YourFolderName**`.
 2. Start **Apache** in the XAMPP Control Panel.
-3. Open <http://localhost/Portfolio/>.
+3. Open <http://localhost/Portfolio/> or Open <http://localhost/YourFolderName/>.
 
 **Option B: PHP's built-in server**
 
@@ -61,18 +61,25 @@ Open <https://marcux-andrei-c-mallari.onrender.com/> in any web browser.
 
 ```
 Portfolio/
-├── index.php              page frame (head, header, menus, footer) and the Home text at the top
+├── index.php                       page frame (head, header, menus, footer) and the Home text at the top
 ├── data/
-│   ├── content.php        all the text: menu, skills, projects, photos, certifications, contact
-│   └── code/              short code excerpts shown in each project's "View Code"
+│   ├── content.php                 all the text: menu, skills, projects, photos, certifications, contact
+│   └── code/                       short code excerpts shown in each project's "View Code"
 ├── includes/
-│   └── sections/          one layout file per section
+│   └── sections/                   one layout file per section
 ├── assets/
-│   ├── css/style.css      all the styles
-│   ├── js/app.js          all the scripts
-│   └── img/               projects/, photography/ and certificates/ pictures
-├── Dockerfile             used by Render to run the site (PHP and Apache)
-└── .dockerignore          files Docker should leave out
+│   ├── css/style.css               all the styles
+│   ├── js/app.js                   all the scripts
+│   └── img/                        projects/, photography/ and certificates/ pictures
+        └── projects
+            └── DigiLearn
+            └── KahitSaan
+            └── LockerSystem
+            └── ZannieRiceStore
+        └── photography
+        └── certificates
+├── Dockerfile                      used by Render to run the site (PHP and Apache)
+└── .dockerignore                   files Docker should leave out
 ```
 
 ---
