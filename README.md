@@ -135,18 +135,13 @@ Delete its entry in `data/content.php` first, then delete the file. If you delet
 
 ### Styles and scripts
 
-| To change | Edit |
+|To change|To edit|
+|---|---|
 | Fonts, colors, text sizes, page width | the top of `assets/css/style.css` |
 | Carousel size, blur and fading | `assets/css/style.css` (search for `Depth-of-field`) and `assets/js/app.js` (search for `VISUAL CONTENT`) |
 | Intro animation timing | `assets/css/style.css` (search for `intro`) |
 
 To use a different font, change `--font-head` or `--font-body` at the top of `style.css` and the Google Fonts link in the `<head>` of `index.php`.
-
-### After any change
-
-On your computer, refresh the browser to check it. To update the live site, commit and push to GitHub. Render rebuilds and updates it automatically.
-
----
 
 ## Author
 
