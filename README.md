@@ -1,6 +1,6 @@
 # Mallari Portfolio
 
-A personal portfolio website by Marcux Andrei C. Mallari, an IT student who builds web systems and enjoys photography and photo editing. It brings together his skills, projects, photography, and certifications in one single-page site.
+This Portoflio Website is created by Marcux Andrei C. Mallari, an IT student who builds web systems and enjoys photography and photo editing. It brings together my skills, projects, photography, and certifications in one single-page site.
 
 Live site: <https://marcux-andrei-c-mallari.onrender.com/>
 
