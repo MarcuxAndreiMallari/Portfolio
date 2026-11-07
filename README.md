@@ -72,10 +72,10 @@ Portfolio/
 │   ├── js/app.js                   all the scripts
 │   └── img/                        projects/, photography/ and certificates/ pictures
         └── projects
-            └── DigiLearn
-            └── KahitSaan
-            └── LockerSystem
-            └── ZannieRiceStore
+            └── DigiLearn           pictures of DigiLearn system
+            └── KahitSaan           pictures of KahitSaan system
+            └── LockerSystem        pictures of LockerSystem system
+            └── ZannieRiceStore     pictures of ZannieRiceStore system
         └── photography
         └── certificates
 ├── Dockerfile                      used by Render to run the site (PHP and Apache)
